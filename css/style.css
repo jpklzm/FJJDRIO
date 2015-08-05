@@ -144,7 +144,7 @@ h3.ls-s-1{color: #fff !important;}
 .logo{position: relative;float: left;-webkit-transition: linear .3s;-moz-transition: linear .3s;-ms-transition: linear .3s;-o-transition: linear .3s;transition: linear .3s;margin-top: 11px; margin-left: 0px;}
 .logo h1 {position: relative;float: left;}
 .logo a {position: relative;float: left;z-index: 999;-webkit-transition: linear .3s;-moz-transition: linear .3s;-ms-transition: linear .3s;-o-transition: linear .3s;transition: linear .3s;}
-.logo img {min-height: 75px;position: relative;float: left;-webkit-transition: linear .3s;-moz-transition: linear .3s;-ms-transition: linear .3s;-o-transition: linear .3s;transition: linear .3s;}
+.logo img {min-height: 120px;position: relative;float: left;-webkit-transition: linear .3s;-moz-transition: linear .3s;-ms-transition: linear .3s;-o-transition: linear .3s;transition: linear .3s;}
 .logo_normal{position: relative; margin-top: 18px;margin-bottom: 0; margin-left: 0px;max-height:58px;}
 .logo_retina{display:none; position: relative; margin-top: 10px; margin-left: 0px;max-height:58px;}
 .n-hm .logo{margin-top: 7px !important;}
