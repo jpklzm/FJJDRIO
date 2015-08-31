@@ -251,7 +251,7 @@ header #menulava > li > a, .sf-menu li a {font-family: "Open Sans", Arial, sans-
 header #menulava > li > a:hover, .sf-menu li li a:hover{color: white !important;}
 header #menulava > li{margin-left: 25px;margin-right: 25px;}
 header #menu{margin-top: -128px;}
-header #menu #menulava > li > a{padding-bottom: 40px;}
+header #menu #menulava > li > a{padding-bottom: 0px;}
 header #menu.n-menu{margin-top: 0px;}
 header #menu.n-menu #menulava > li > a{padding-bottom: 26px;}
 
@@ -368,7 +368,7 @@ a:focus > .sf-sub-indicator,a:hover > .sf-sub-indicator,a:active > .sf-sub-indic
 .n-hm .style4{margin-top: 16px !important; }
 header #menu{margin-top:-128px;}
 .headerstyle-style1 header #menu{margin-top:26px;}
-header #menu #menulava > li > a{padding-bottom:39px;}
+header #menu #menulava > li > a{padding-bottom:0px;}
 header #menu.n-menu{margin-top:0px;}
 header #menu.n-menu #menulava > li > a{padding-bottom:20px;}
 
