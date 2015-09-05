@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport">
+	<meta name="keywords" content="YOUR KEYWORDS">
+	<meta name="description" content="YOUR DESCRIPTION"/>
+	<title>FJJD-RIO</title>
+
+	<!-- favicon -->
+	<link rel="shortcut icon" href="favicon.png">
+	<link rel="apple-touch-icon" href="#">
+	<link rel="apple-touch-icon" sizes="72x72" href="#">
+	<link rel="apple-touch-icon" sizes="114x114" href="#">
+	<link rel="apple-touch-icon" sizes="144x144" href="#">
+
+	<!-- Zap CSS -->
+	<link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
+	<link rel='stylesheet' href='css/skeleton.css' type='text/css' media='all' />
+	<link rel='stylesheet' href='css/camera.css' type='text/css' media='all' />
+	<link rel='stylesheet' href='css/tango/skin.css' type='text/css' media='all' />
+	<link rel='stylesheet' href='css/flexslider.css' type='text/css' media='all' />
+	<link rel='stylesheet' href='css/blog.css' type='text/css' media='all' />
+	<link rel='stylesheet' href='css/prettyPhoto.css' type='text/css' media='all' />
+	<link rel='stylesheet' href='css/resize.css' type='text/css' media='all' />
+	<link rel='stylesheet' href='css/font-awesome.min.css' type='text/css' media='all' />
+	<link rel='stylesheet' href='css/retina.css' type='text/css' media='all' />
+	<link rel='stylesheet' href='css/shortcodes.css' type='text/css' media='all' />
+	<!-- Layer Slider -->
+	<link rel='stylesheet'  href='css/layerslider.css' type='text/css' media='all' />
+
+	<!-- Rev Slider -->
+	<link rel='stylesheet' href='css/settings.css' type='text/css' media='all' />
+	<link rel='stylesheet'  href='css/captions.css' type='text/css' media='all' />
+
+	<!-- COLORS VARIATIONS -->
+	<link rel='stylesheet'  href='css/color-variations/greenzap.css' type='text/css' media='all' title="greenzap"/>
+	<link rel='stylesheet'  href='css/color-variations/red.css' type='text/css' media='all'  title="red"/>
+	<link rel='stylesheet'  href='css/color-variations/green.css' type='text/css' media='all'  title="green"/>
+	<link rel='stylesheet'  href='css/color-variations/orange.css' type='text/css' media='all' title="orange"/>
+	<link rel='stylesheet'  href='css/color-variations/yellow.css' type='text/css' media='all'  title="yellow"/>
+	<link rel='stylesheet'  href='css/color-variations/blue.css' type='text/css' media='all' title="blue"/>
+	<link rel='stylesheet'  href='css/color-variations/violet.css' type='text/css' media='all'  title="violet"/>
+	<link rel='stylesheet'  href='css/color-variations/brown.css' type='text/css' media='all'  title="brown"/>
+	<link rel='stylesheet'  href='css/color-variations/darkblue.css' type='text/css' media='all'  title="darkblue"/>
+	<link rel='stylesheet'  href='css/color-variations/pink.css' type='text/css' media='all' title="pink" />
+
+	<!-- Fonts -->
+	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans' type='text/css' media='screen' />
+
+	<!-- Javascript -->
+	<script type='text/javascript' src='js/jquery.js'></script>
+	<script type='text/javascript' src='js/jQuerytools.js'></script>
+	<script type='text/javascript' src='js/utils.js'></script>
+	<script type='text/javascript' src='js/zap.js'></script>
+	<script type='text/javascript' src='js/blog.js'></script>
+	<script type='text/javascript' src='js/twitter/jquery.tweet.js'></script>
+	<script type='text/javascript' src='js/camera.min.js'></script>
+	<script type='text/javascript' src='js/layerslider.kreaturamedia.jquery.js'></script>
+	<script type='text/javascript' src='js/jquery-easing-1.3.js'></script>
+	<script type='text/javascript' src='js/jquerytransit.js'></script>
+	<script type='text/javascript' src='js/layerslider.transitions.js'></script>
+	<script type='text/javascript' src='js/jquery.themepunch.revolution.min.js'></script>
+	<script type='text/javascript' src='js/jquery.flexslider-min.js'></script>
+	<script type='text/javascript' src='js/jflickrfeed.js'></script>
+	<script type='text/javascript' src='js/jquery.jcarousel.min.js'></script>
+
+	<script type='text/javascript' src='js/preview.js'></script>
+
+</head>
+
+
+<style>
+#switcher{
+	position: fixed;
+	left: 0px;
+	top: 80px;
+	z-index: 9999999999999;
+	background:#fff;
+	border:1px solid #ddd;
+	padding:0 4px 10px 7px;
+	width:150px;
+}
+
+#switcher form select{
+	width:148px;
+	padding:4px 6px;
+	border:1px solid #ccc;
+}
+.option_btn{
+	position: fixed;
+	top: 90px;
+	cursor: pointer;
+	z-index: 9999999999999;
+	width: 40px;
+	height: 40px;
+}
+
+.settings-open{
+	background:  url(img/close.png) 10px 11px no-repeat;
+}
+
+.settings-close{
+	background:  url(img/open.png) 15px 11px  no-repeat;
+}
+
+#option_wrapper
+{
+	position: fixed;
+	top: 80px;
+	left:-222px;
+	width: 200px;
+	padding: 7px 0 23px 0;
+	background-color: #fff;
+	z-index: 9999999999999;
+	color: #666;
+	font-size: 11px;
+	border: 1px solid #E1E1E1;
+	border-bottom: 1px solid rgba(150, 150, 150, 0.2);
+	-webkit-box-shadow: 2px 2px 0px 0px rgba(150, 150, 150, 0.1);
+	-moz-box-shadow: 2px 2px 0px 0px rgba(150, 150, 150, 0.1);
+	box-shadow: 2px 2px 0px 0px rgba(150, 150, 150, 0.1);
+	font-family: "Helvetica Neue", "Arial";
+}
+a.wide{
+	padding: 10px 20px;
+background: #f2f2f2;
+color: #666;
+font-size: 12px;
+}
+a.boxed{
+	padding: 10px 20px;
+background: #f2f2f2;
+color: #666;
+font-size: 12px;
+margin-left: 15px;
+}
+a.boxed:hover, a.wide:hover{
+	background: #10b9b9;
+	color: #fff;
+}
+#option_wrapper .inner
+{
+	width: 90%;
+	margin:auto;
+}
+#bg_body_image{
+	position: relative;
+	float: left;
+	top: 5px;
+	left: 5px;
+}
+#bg_body_image a{
+	width: 32px;
+height: 32px;
+opacity: .8;
+}
+#bg_body_image img{
+	width: 32px;
+	height: 32px;
+}
+
+#bg_body_image a.pattern img{
+	background-attachment: fixed;
+	background-repeat: repeat;
+}
+.switch-button {
+	border:1px solid #fff;
+	border-left:1px solid #fff;
+	display:block;
+	height:30px;
+	width:30px;
+	position:absolute;
+	margin-left:152px;
+	margin-top:10px;
+	cursor:pointer;
+}
+#option_wrapper p{
+	border-bottom: 1px solid #f8f8f8;
+border-top: 1px solid #f8f8f8;
+margin-bottom: 10px;
+margin-top: 10px;
+position: relative;
+float: left;
+width: 100%;
+text-align: center;
+right: 2px;
+font-size: 12px;
+padding: 10px 0;
+}
+#option_wrapper .button{
+	top: 29px;
+	position: relative;
+	float: left;
+	padding: 8px;
+	background: #EEE;
+	text-align: center;
+	margin-bottom: 30px;
+	left: 31px;
+}
+.open {
+	background:#fff url(../img/close.png) no-repeat center center;
+	border-bottom: none;
+}
+.closed {
+	background:#fff url(../img/open.png) no-repeat center center;
+	border-bottom: none;
+}
+
+a.closed:hover, a.open:hover {
+	border-bottom: none;
+}
+
+#option_wrapper .skins{
+	position: relative;
+	float: left;
+	left: 0;
+	top: 5px;
+	padding-bottom: 10px;
+}
+#option_wrapper .skins li{
+	position: relative;
+	float: left;
+	margin: 0 !important;
+}
+#option_wrapper .skins a{
+	position: relative;
+float: left;
+text-decoration: none;
+border: none !important;
+padding: 0;
+color: #ccc;
+text-align: center;
+font-size: 13px;
+text-indent: -9999px;
+width: 32px;
+height: 32px;
+margin: 2px;
+opacity: .8;
+}
+#option_wrapper .skins a:hover{opacity: 1;}
+#option_wrapper .skins a.blue{background: #24a0d3;}
+#option_wrapper .skins a.red{background: #d94d4d;}
+#option_wrapper .skins a.green{background: #71a615;}
+#option_wrapper .skins a.pink{background: #bd47bd;}
+#option_wrapper .skins a.violet{background: #a33da3;}
+#option_wrapper .skins a.yellow{background: #dca51b;}
+#option_wrapper .skins a.greenzap{background: #10b9b9;}
+#option_wrapper .skins a.darkblue{background: #0a79c4;}
+#option_wrapper .skins a.orange{background: #df6031;}
+#option_wrapper .skins a.brown{background: #9d7142;}
+    	</style>
+
+
+
+
+
+    </div>
+
+
+	<!-- BEGIN: BODY -->
+	<body class="home page">
+
+	<div class="boxed-page">
+
+
+	<div class="boxed-page">
+
+		<!-- FOR HIGH RESOLUTION IMAGES USED THIS IMG TAG
+			<img src="low-res.png" media="only screen and (min-device-pixel-ratio: 2) then (src=high-res.png)"/>
+		-->
+
+		<!-- LOADING PAGES | COMMENT the DIV "loading-pages" IF YOU DON'T WANT TO USE IT -->
+		<div class="loading-pages"></div>
+
+		<!-- BEGIN: ALL CONTENT -->
+		<div class="everything">
+
+			<!-- BEGIN: HEADER CONTAINER -->
+			<div class="header_container headerstyle-style2">
+
+				<!-- BEGIN: TOP BAR -->
+				<div class="fullwidth_container style-top-bar">
+					<div class="container">
+						<div class="info_above_menu">
+
+							<!-- BEGIN: TOP BAR CONTENTS LEFT -->
+							<div class="eight columns" style="float:left;top: 13px; position:relative;">
+								<div class="telephone">
+									<i class="fa fa-phone"></i> 21 3624-9589
+								</div>
+
+								<div class="email">
+									<i class="fa fa-envelope"></i>
+									<a href="mailto:geral@zapstudio.com">contato@fjjdrio.com.br</a>
+								</div>
+
+								<div class="address">
+									<i class="fa fa-map-marker"></i> Rua Canavieiras, n° 243 - Grajaú - RJ
+								</div>
+							</div>
+							<!-- END -->
+
+							<!-- BEGIN: TOP BAR CONTENTS RIGHT -->
+							<div class="eight columns">
+								<div class="socialdiv" style="float:right;">
+									<ul>
+										<li><a href="#" target="_blank" class="facebook" title="Facebook"></a></li>
+										<li><a href="#" target="_blank" class="twitter" title="Twitter"></a></li>
+									</ul>
+								</div>
+							</div>
+							<!-- END -->
+						</div>
+					</div>
+				</div>
+				<!-- END: TOP BAR -->
+
+				<!-- BEGIN: HEADER -->
+				<header id="header" class="container">
+
+					<!-- BEGIN: LOGO + SLOGAN-->
+					<div class="logo_and_menu">
+
+						<!-- BEGIN: LOGO -->
+						<div class="logo columns">
+							<h1>
+								<a href="index.html" tabindex="-1">
+									<!-- LOGO -->
+									<img class="logo_normal notalone" src="imgz/logositetopo.png" alt="" title="">
+
+						    		<!-- LOGO RETINA -->
+						    		<img class="logo_retina" src="imgz/logositetopo.png" alt="" title="">
+						    	</a>
+						    </h1>
+			    	</div>
+
+					<!-- BEGIN: MENU -->
+					<nav id="menu" class="columns">
+
+						<!-- BEGIN: DESKTOP MENU -->
+						<ul id="menulava" class="sf-menu">
+
+							<li class="current-menu-item"><a href="#">Home</a>
+							</li>
+
+							<li class=""><a href="#">Equipe</a>
+								<ul class="sub-menu">
+									<li><a href="#">Diretoria</a></li>
+									<li><a href="#">Filiados</a></li>
+									<li><a href="#">Árbitros</a></li>
+								</ul>
+							</li>
+
+							<li class=""><a href="#">Agremiações</a>
+								<ul class="sub-menu">
+									<li><a href="#">Como registrar</a></li>
+									<li><a href="#">Registrados</a></li>
+								</ul>
+							</li>
+
+							<li class=""><a href="#">Campeonatos</a>
+								<ul class="sub-menu">
+									<li><a href="#">Próximos Eventos</a></li>
+									<li><a href="#">Calendário</a></li>
+									<li><a href="#">Resultados</a></li>
+								</ul>
+							</li>
+
+							<li class=""><a href="#">Notícias</a></li>
+
+						</ul>
+						<ul id="menulava" class="sf-menu">
+
+							<li class=""><a href="#">Cursos</a>
+								<ul class="sub-menu">
+									<li><a href="#">Defesa Pessoal</a></li>
+									<li><a href="#">Regras / Arbitragem</a></li>
+									<li><a href="#">Primeiros Socorros</a></li>
+									<li><a href="#">Resultados</a></li>
+								</ul>
+							</li>
+
+							<li class=""><a href="#">Regras</a>
+								<ul class="sub-menu">
+									<li><a href="#">Regulamento do Ranking</a></li>
+									<li><a href="#">Livro de Regras</a></li>
+									<li><a href="#">Regras RISC</a></li>
+									<li><a href="#">Tabelas de Peso</a></li>
+								</ul>
+							</li>
+
+							<li class=""><a href="#">Atletas</a>
+								<ul class="sub-menu">
+									<li><a href="#">Ranking</a></li>
+									<li><a href="#">Filiação</a></li>
+									<li><a href="#">Diplomação</a></li>
+								</ul>
+							</li>
+
+							<li class=""><a href="#">Resultados</a>
+								<ul class="sub-menu">
+									<li><a href="#">2015</a></li>
+									<li><a href="#">2014</a></li>
+									<li><a href="#">2013</a></li>
+								</ul>
+							</li>
+
+							<li class=""><a href="#">Contato</a></li>
+
+						</ul>
+						<!-- END: DESKTOP MENU -->
+
+
+						</div>
+						<!-- End Menu -->
+					</nav>
+
+				</div>
+				</header>
+				<!-- END: HEADER -->
+				<div class="header-shadow"></div>
+
+			</div>
+			<!-- END: HEADER CONTAINER -->
+
+			<!-- BEGIN: REVOLUTION SLIDER
+				 NOTE: PLEASE READ THE REV SLIDER DOCUMENTATION TO LEARN HOW TO WORK WITH THE SLIDER
+			-->
+			<div class="entry-content">
+				<div class="container">
+		            <article id="projects-2">
+		            	<div class="entry-content" style="margin-top: 0;">
+
+		                    <!-- BEGIN: PROJECTS STYLE 2 -->
+		                    <div class="thumbnails_list">
+		                        <ul id="da-thumbs" class="da-thumbs proj_list">
+
+		                            <!-- PROJECT #01 -->
+		                            <li data-id="id-1" class="illustrations logotype  slides_item post-thumb view eight columns ">
+		                                <a href="http://designarethemes.com/themes/zapwp/portfolio/halloo/">
+		                                    <img src="imgz/diretoria/gavazza.jpg" class="nc2" alt="Gavazza" title="Gavazza">
+		                                    <div>
+		                                        <span class="overlay_title">Rogério Gavazza</span>
+		                                        <span class="overlay_categories">Presidente</span>
+                                            <span class="overlay_categories">- Professor de Educação Física</span>
+                                            <span class="overlay_categories">- Faixa Preta de Jiu Jitsu</span>
+                                            <span class="overlay_categories">- Faixa Preta de Judo</span>
+                                            <span class="overlay_categories">- Faixa Preta de Karate Shotokan</span>
+                                            <span class="overlay_categories">- Professor e Diretor da Escola de Lutas Gavazza, desde 1986</span>
+                                            <span class="overlay_categories">- Promotor de eventos de lutas desde 1992</span>  		                                        
+		                                    </div>
+		                                </a>
+		                            </li>
+
+		                            <!-- PROJECT #02 -->
+		                            <li data-id="id-2" class="design logotype  slides_item post-thumb view eight columns ">
+		                                <a href="http://designarethemes.com/themes/zapwp/portfolio/eagle-financial-consulting/">
+		                                    <img src="img/preview_images/490x245.gif" class="nc2" alt="Eagle Financial Consulting" title="Eagle Financial Consulting">
+		                                    <div>
+		                                        <span class="overlay_title">Eagle Financial Consulting</span>
+		                                        <span class="overlay_categories">Design / Logotype</span>
+		                                        <span class="viewproj"><i class="fa fa-arrow-right"></i></span>
+		                                    </div>
+		                                </a>
+		                            </li>
+
+		                            <!-- PROJECT #03 -->
+		                            <li data-id="id-3" class="logotype  slides_item post-thumb view eight columns ">
+		                                <a href="http://designarethemes.com/themes/zapwp/portfolio/logo-bana/">
+		                                    <img src="img/preview_images/490x245.gif" class="nc2" alt="Logo Bana" title="Logo Bana">
+		                                    <div>
+		                                        <span class="overlay_title">Logo Bana</span>
+		                                        <span class="overlay_categories">Logotype </span>
+		                                        <span class="viewproj"><i class="fa fa-arrow-right"></i></span>
+		                                    </div>
+		                                </a>
+		                            </li>
+
+		                            <!-- PROJECT #04 -->
+		                            <li data-id="id-4" class="wordpress  slides_item post-thumb view eight columns ">
+		                                <a href="http://designarethemes.com/themes/zapwp/portfolio/fresh-clean-wordpress/">
+		                                    <img src="img/preview_images/490x245.gif" class="nc2" alt="Fresh &#038; Clean WordPress" title="Fresh &#038; Clean WordPress">
+		                                    <div>
+		                                        <span class="overlay_title">Fresh &#038; Clean WordPress</span>
+		                                        <span class="overlay_categories">Wordpress </span>
+		                                        <span class="viewproj"><i class="fa fa-arrow-right"></i></span>
+		                                    </div>
+		                                </a>
+		                            </li>
+
+		                            <!-- PROJECT #05 -->
+		                            <li data-id="id-5" class="design illustrations  slides_item post-thumb view eight columns ">
+		                                <a href="http://designarethemes.com/themes/zapwp/portfolio/london-office/">
+		                                    <img src="img/preview_images/490x245.gif" class="nc2" alt="London Office" title="London Office">
+		                                    <div>
+		                                        <span class="overlay_title">London Office</span>
+		                                        <span class="overlay_categories">Design / Illustrations</span>
+		                                        <span class="viewproj"><i class="fa fa-arrow-right"></i></span>
+		                                    </div>
+		                                </a>
+		                            </li>
+
+		                            <!-- PROJECT #06 -->
+		                            <li data-id="id-6" class="design illustrations  slides_item post-thumb view eight columns ">
+		                                <a href="http://designarethemes.com/themes/zapwp/portfolio/3d-book/">
+		                                    <img src="img/preview_images/490x245.gif" class="nc2" alt="3D Book" title="3D Book">
+		                                    <div>
+		                                        <span class="overlay_title">3D Book</span>
+		                                        <span class="overlay_categories">Design / Illustrations</span>
+		                                        <span class="viewproj"><i class="fa fa-arrow-right"></i></span>
+		                                    </div>
+		                                </a>
+		                            </li>
+
+		                            <!-- PROJECT #07 -->
+		                            <li data-id="id-7" class="video  slides_item post-thumb view eight columns ">
+		                                <a href="http://designarethemes.com/themes/zapwp/portfolio/reuben-loane-films/">
+		                                    <img src="img/preview_images/490x245.gif" class="nc2" alt="Reuben Loane Films" title="Reuben Loane Films">
+		                                    <div>
+		                                        <span class="overlay_title">Reuben Loane Films</span>
+		                                        <span class="overlay_categories">Video </span>
+		                                        <span class="viewproj"><i class="fa fa-arrow-right"></i></span>
+		                                    </div>
+		                                </a>
+		                            </li>
+
+		                            <!-- PROJECT #08 -->
+		                            <li data-id="id-8" class="photography  slides_item post-thumb view eight columns ">
+		                                <a href="http://designarethemes.com/themes/zapwp/portfolio/photos-from-daniele-zedda/">
+		                                    <img src="img/preview_images/490x245.gif" class="nc2" alt="Daniele Zedda" title="Daniele Zedda">
+		                                    <div>
+		                                        <span class="overlay_title">Daniele Zedda</span>
+		                                        <span class="overlay_categories">Photography </span>
+		                                        <span class="viewproj"><i class="fa fa-arrow-right"></i></span>
+		                                    </div>
+		                                </a>
+		                            </li>
+
+		                            <!-- PROJECT #09 -->
+		                            <li data-id="id-9" class="design photography  slides_item post-thumb view eight columns ">
+		                                <a href="http://designarethemes.com/themes/zapwp/portfolio/simplicity/">
+		                                    <img src="img/preview_images/490x245.gif" class="nc2" alt="Simplicity" title="Simplicity">
+		                                    <div>
+		                                        <span class="overlay_title">Simplicity</span>
+		                                        <span class="overlay_categories">Design / Photography</span>
+		                                        <span class="viewproj"><i class="fa fa-arrow-right"></i></span>
+		                                    </div>
+		                                </a>
+		                            </li>
+
+		                            <!-- PROJECT #10 -->
+		                            <li data-id="id-10" class="wordpress  slides_item post-thumb view eight columns ">
+		                                <a href="http://designarethemes.com/themes/zapwp/portfolio/strong-flexible-wp/">
+		                                    <img src="img/preview_images/490x245.gif" class="nc2" alt="Strong &#038; Flexible WP" title="Strong &#038; Flexible WP">
+		                                    <div>
+		                                        <span class="overlay_title">Strong &#038; Flexible WP</span>
+		                                        <span class="overlay_categories">Wordpress </span>
+		                                        <span class="viewproj"><i class="fa fa-arrow-right"></i></span>
+		                                    </div>
+		                                </a>
+		                            </li>
+
+		                            <!-- PROJECT #11 -->
+		                            <li data-id="id-11" class="illustrations  slides_item post-thumb view eight columns ">
+		                                <a href="http://designarethemes.com/themes/zapwp/portfolio/jack-daniels/">
+		                                    <img src="img/preview_images/490x245.gif" class="nc2" alt="Jack Daniels" title="Jack Daniels">
+		                                    <div>
+		                                        <span class="overlay_title">Jack Daniels</span>
+		                                        <span class="overlay_categories">Illustrations </span>
+		                                        <span class="viewproj"><i class="fa fa-arrow-right"></i></span>
+		                                    </div>
+		                                </a>
+		                            </li>
+
+		                            <!-- PROJECT #12 -->
+		                            <li data-id="id-12" class="illustrations  slides_item post-thumb view eight columns ">
+		                                <a href="http://designarethemes.com/themes/zapwp/portfolio/career-challenge/">
+		                                    <img src="img/preview_images/490x245.gif" class="nc2" alt="Career Challenge" title="Career Challenge">
+		                                    <div>
+		                                        <span class="overlay_title">Career Challenge</span>
+		                                        <span class="overlay_categories">Illustrations </span>
+		                                        <span class="viewproj"><i class="fa fa-arrow-right"></i></span>
+		                                    </div>
+		                                </a>
+		                            </li>
+
+		                        </ul>
+		                    </div>
+		                    <!-- END: PROJECTS STYLE 2 -->
+		                </div>
+		                <!-- .entry-content(PROJECTS) -->
+
+		                <!-- CATEGORIES DIV (HELPER) -->
+		                <div class="cat_helper">
+		                    <ul class="splitter">
+		                        <li onclick='$(this).addClass("active").siblings().removeClass("active");$(this).siblings().not("active").slideHorzHide();$(this).parents(".filterby").children(".filterby_btn").removeClass("open").addClass("closed");' id='term_id_-1' class='segment-1 selected-1 termCat active'><a class='no-flicker' href='javascript:;' data-value='all'>All</a>
+		                        </li>
+		                        <li onclick='$(this).addClass("active").siblings().removeClass("active");$(this).siblings().not("active").slideHorzHide();$(this).parents(".filterby").children(".filterby_btn").removeClass("open").addClass("closed");' id='term_id_9'
+		                        class='segment-0 termCat'><a href='javascript:;' class='no-flicker' data-value='video'>Video</a>
+		                        </li>
+		                        <li onclick='$(this).addClass("active").siblings().removeClass("active");$(this).siblings().not("active").slideHorzHide();$(this).parents(".filterby").children(".filterby_btn").removeClass("open").addClass("closed");' id='term_id_10'
+		                        class='segment-0 termCat'><a href='javascript:;' class='no-flicker' data-value='wordpress'>Wordpress</a>
+		                        </li>
+		                        <li onclick='$(this).addClass("active").siblings().removeClass("active");$(this).siblings().not("active").slideHorzHide();$(this).parents(".filterby").children(".filterby_btn").removeClass("open").addClass("closed");' id='term_id_17'
+		                        class='segment-0 termCat'><a href='javascript:;' class='no-flicker' data-value='design'>Design</a>
+		                        </li>
+		                        <li onclick='$(this).addClass("active").siblings().removeClass("active");$(this).siblings().not("active").slideHorzHide();$(this).parents(".filterby").children(".filterby_btn").removeClass("open").addClass("closed");' id='term_id_19'
+		                        class='segment-0 termCat'><a href='javascript:;' class='no-flicker' data-value='illustrations'>Illustrations</a>
+		                        </li>
+		                        <li onclick='$(this).addClass("active").siblings().removeClass("active");$(this).siblings().not("active").slideHorzHide();$(this).parents(".filterby").children(".filterby_btn").removeClass("open").addClass("closed");' id='term_id_20'
+		                        class='segment-0 termCat'><a href='javascript:;' class='no-flicker' data-value='logotype'>Logotype</a>
+		                        </li>
+		                        <li onclick='$(this).addClass("active").siblings().removeClass("active");$(this).siblings().not("active").slideHorzHide();$(this).parents(".filterby").children(".filterby_btn").removeClass("open").addClass("closed");' id='term_id_23'
+		                        class='segment-0 termCat'><a href='javascript:;' class='no-flicker' data-value='photography'>Photography</a>
+		                        </li>
+		                    </ul>
+		                </div>
+		                <!-- /HELPER -->
+		            </article>
+		        </div>
+		    </div><!-- end: FULL CONTENT -->
+
+			<script type="text/javascript">
+			jQuery(document).ready(function($){
+				$('#projects-2 .da-thumbs > li').hoverdir();
+				quicksandstart("projects-2");
+				$('.projectCategories .splitter').children('li').not('.active').slideHorzHide();
+			});
+
+			function toggleFilter($el){
+				if ($el.hasClass('closed')){
+					/* OPEN */
+					$el.siblings('.projectCategories').children('.splitter').children('li').slideHorzShow();
+					$el.removeClass('closed').addClass('open');
+				} else {
+					/* CLOSE */
+					$el.siblings('.projectCategories').children('.splitter').children('li').not('.active').slideHorzHide();
+					$el.removeClass('open').addClass('closed');
+				}
+			}
+			$.fn.slideHorzShow = function( speed, easing, callback ) { this.animate( { marginLeft : 'show', marginRight : 'show', paddingLeft : 'show', paddingRight : 'show', width : 'show' }, speed, easing, callback ); };
+			$.fn.slideHorzHide = function( speed, easing, callback ) { this.animate( { marginLeft : 'hide', marginRight : 'hide', paddingLeft : 'hide', paddingRight : 'hide', width : 'hide' }, speed, easing, callback ); };
+		</script>
+
+			 <!-- END: CONTAINER -->
+
+			<!-- BEGIN: BACK-TO-TOP BUTTON -->
+			<div id="back-to-top"><a href="javascript:;"></a></div>
+
+
+			<!-- BEGIN: FOOTER -->
+			<div id="big_footer">
+
+				<!--
+	<div id="tweet_scroll_place">
+					<div class="container tweet_bird">
+						<div class="tweet_scroll_text sixteen columns"></div>
+					</div>
+				</div>
+
+				<script type="text/javascript">
+					jQuery(function($){
+				        $(".tweet_scroll_text").tweet({
+				          modpath: 'js/twitter/index.php',
+				          username: "DesignareThemes",
+				          page: 1,
+				          avatar_size: 0,
+				          count: 5,
+				          loading_text: "loading ..."
+				        });
+			        });
+			        jQuery(document).ready(function(){
+					      var ul = jQuery(".tweet_scroll_text .tweet_list");
+				          var ticker = function() {
+				            setTimeout(function() {
+				              ul.find('li:first').animate( {marginTop: '-4em'}, 500, function() {
+				                jQuery(this).detach().appendTo(ul).removeAttr('style');
+				              });
+				              ticker();
+				            }, 5000);
+				          };
+				          ticker();
+				    });
+				</script>
+	-->
+
+				<!-- BEGIN: FOOTER WIDGETS -->
+		    	<div id="footer_content">
+		    		<div class="container">
+
+		    			<!-- BEGIN: CONTACT DETAILS WIDGET -->
+		    			<div class="row">
+								<h4>Federação de Jiu Jitsu Desportivo do Rio de Janeiro</h4>
+		    				<!-- BEGIN: WIDGET -->
+		    				<div class="textwidget">
+								Rua Canavieiras, nº 243, Grajaú<br/>
+								Rio de Janeiro, RJ - Brasil<br/><br/>
+
+								<strong>Email:</strong> contato@fjjdrio.com.br<br/>
+								<strong>Phone:</strong>(21)3624-9589<br/>
+
+								</div>
+							<!-- END: WIDGET -->
+						</div>
+					</div>
+					<!-- END: CONTACT DETAILS WIDGET -->
+
+		    <!-- BEGIN: SECONDARY FOOTER -->
+		    <div class="copys">
+				<div class="container">
+
+					<!-- BEGIN: SECONDARY FOOTER LEFT -->
+					<div class="copys_left eight columns">
+						© 2015 - Todos os Direitos Reservados - Desenvolvido por <a href="https://github.com/jpklzm">Jean Menezes</a><br/>
+
+						<!-- BEGIN: FOOTER MENU -->
+						<a href="#">Home</a> - <a href="#">Equipe</a> - <a href="#">Campeonatos</a> - <a href="#">Midia</a> - <a href="#">Atletas</a> - <a href="#">Contato</a>
+					</div>
+
+					<!-- BEGIN: SECONDARY FOOTER RIGHT -->
+					<div class="copys_right eight columns">
+						<div class="footer_right_content">
+
+							<!-- BEGIN: FOOTER SOCIAL ICONS -->
+							<div class="socialdiv" style="float:right;">
+								<ul>
+									<li><a href="#" target="_blank" class="facebook" title="Facebook"></a></li>
+									<li><a href="#" target="_blank" class="twitter" title="Twitter"></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END: SECONDARY FOOTER -->
+		</div>
+
+
+	</div>
+
+<!-- END: ALL CONTENT -->
+</div>
+	</div>
+<script type="text/javascript" src="js/waypoints.min.js"></script>
+<script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
+
+</body>
+</html>
